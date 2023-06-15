@@ -64,6 +64,25 @@ public class Main {
 
     public static void task4 () {
         System.out.println("Задача 4");
+        //Василий решил положить деньги на накопительный счет, где каждый месяц к сумме его вклада добавляется еще 7%.
+        // Первоначальная сумма вклада — 15 тысяч рублей.
+        //Вычислите и выведите в консоль, сколько месяцев Василию нужно будет копить,
+        // чтобы собрать сумму в 12 миллионов рублей при условии, что процент банка от накоплений не меняется, а всегда равен 7%.
+
+        int initialDeposit = 15_000;
+        double interestRate = 0.07;
+        int target = 12_000_000;
+
+        int months = 0;
+        double balance = initialDeposit;
+
+        while (balance < target) {
+            balance += balance * interestRate;
+            months++;
+            System.out.printf("Месяц %d: баланс составляет %.2f рублей%n", months, balance);
+        }
+
+        System.out.println("Накопления достигнуты через " + months + " месяца(ев)");
     }
 
     public static void task5 () {
