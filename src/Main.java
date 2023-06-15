@@ -108,6 +108,21 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
+        int initialDeposit = 15_000;
+        double interestRate = 0.07;
+        int years = 9;
+
+        for (int year = 1; year <= years; year++) {
+            for (int halfYear = 1; halfYear <= 2; halfYear++) {
+                double balance = initialDeposit;
+
+                for (int month = 1; month <= (year-1) * 12 + halfYear * 6; month++) {
+                    balance += balance * interestRate;
+                }
+
+                System.out.printf("Год %d, полугодие %d: баланс составляет %.2f рублей%n", year, halfYear, balance);
+            }
+        }
     }
 
     public static void task7 () {
