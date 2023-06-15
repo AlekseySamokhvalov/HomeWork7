@@ -87,6 +87,23 @@ public class Main {
 
     public static void task5 () {
         System.out.println("Задача 5");
+        int initialDeposit = 15_000;
+        double interestRate = 0.07;
+        int target = 12_000_000;
+
+        int months = 0;
+        double balance = initialDeposit;
+
+        while (balance < target) {
+            balance += balance * interestRate;
+            months++;
+
+            if (months % 6 == 0) {
+                System.out.printf("Месяц %d: баланс составляет %.2f рублей%n", months, balance);
+            }
+        }
+
+        System.out.println("Накопления достигнуты через " + months + " месяца(ев)");
     }
 
     public static void task6 () {
