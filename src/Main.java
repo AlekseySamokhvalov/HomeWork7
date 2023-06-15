@@ -11,7 +11,7 @@ public class Main {
     }
     public static void task1 () {
         System.out.println("Задача 1");
-
+        //С помощью цикла while посчитайте, сколько месяцев потребуется, чтобы накопить 2 459 000 рублей при условии, что первоначально мы имеем 0 рублей и готовы откладывать по 15 тысяч рублей под 12% годовых.
         int monthlySavings = 15000;
         double targetBalance = 2459000;
         double annualInterestRate = 0.12;
