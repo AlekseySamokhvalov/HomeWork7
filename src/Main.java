@@ -127,6 +127,12 @@ public class Main {
 
     public static void task7 () {
         System.out.println("Задача 7");
+        int firstFriday = 6; // Номер первой пятницы месяца
+        int daysInMonth = 31; // Длина месяца
+
+        for (int day = firstFriday; day <= daysInMonth; day += 7) {
+            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет%n", day);
+        }
     }
 
     public static void task8 () {
