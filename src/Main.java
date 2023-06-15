@@ -47,6 +47,19 @@ public class Main {
 
     public static void task3 () {
         System.out.println("Задача 3");
+        int population = 12_000_000;
+        double birthRate = 0.017;
+        double deathRate = 0.008;
+        int years = 10;
+
+        int i = 1;
+        while (i <= years) {
+            int births = (int) (population * birthRate);
+            int deaths = (int) (population * deathRate);
+            population = population + births - deaths;
+            System.out.println("Год " + i + ", численность населения составляет " + population);
+            i++;
+        }
     }
 
     public static void task4 () {
