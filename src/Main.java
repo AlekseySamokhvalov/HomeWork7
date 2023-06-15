@@ -137,6 +137,19 @@ public class Main {
 
     public static void task8 () {
         System.out.println("Задача 8");
+        int currentYear = 2021; // Текущий год
+        int cometYear = 0; // Год появления кометы
+        int startYear = currentYear - 200; // Начальный год периода расчета
+        int endYear = currentYear + 100; // Конечный год периода расчета
+
+        for (int year = startYear; year < endYear; year++) {
+            if ((year - cometYear) % 79 == 0) {
+                System.out.println(year + " - год появления кометы");
+                cometYear = year;
+            }
+        }
+
+        System.out.println("Следующий год появления кометы: " + (cometYear + 79));
     }
 
 }
