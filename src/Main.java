@@ -33,6 +33,16 @@ public class Main {
 
     public static void task2 () {
         System.out.println("Задача 2");
+        int i = 1;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();
+        for (int j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 
     public static void task3 () {
